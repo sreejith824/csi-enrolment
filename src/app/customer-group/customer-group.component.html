@@ -1,0 +1,9 @@
+<ul class="items">
+  <li *ngFor="let customerGroup of customerGroupList"
+      [class.selected]="customerGroup.organizationNumber === selectedOrganizationNumber">
+    <a [routerLink]="['/enrolment-details', customerGroup.organizationNumber]">
+      <span class="badge">{{ customerGroup.organizationNumber }}</span>{{ customerGroup.customerGroupName}}
+    </a>
+  </li>
+</ul>
+
